@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cofqshytjpguj"]
+
+[ext_resource type="PackedScene" uid="uid://bhnuj4iex0aij" path="res://Scenes/parallax.tscn" id="1_dj0kg"]
+[ext_resource type="PackedScene" uid="uid://ljdmieleumgw" path="res://Scenes/player.tscn" id="2_2j5ls"]
+
+[node name="main" type="Node2D"]
+
+[node name="Parallax" parent="." instance=ExtResource("1_dj0kg")]
+
+[node name="Player" parent="." instance=ExtResource("2_2j5ls")]
+position = Vector2(73, 90)
