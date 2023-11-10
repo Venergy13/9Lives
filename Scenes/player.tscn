@@ -13,7 +13,5 @@ script = ExtResource("1_cm25a")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_yrk43")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_oy1hu")
