@@ -18,5 +18,5 @@ func _process(delta):
 	
 func end():
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "scroll_speed_mid", 0, 3)
-	tween.tween_property(self, "scroll_speed_front", 0, 3)
+	tween.tween_property(self, "scroll_speed_mid", 0, 2)
+	tween.tween_property(self, "scroll_speed_front", 0, 2)
