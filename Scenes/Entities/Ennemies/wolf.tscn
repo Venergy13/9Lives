@@ -40,18 +40,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyj8x"]
-size = Vector2(20, 17)
+size = Vector2(22, 18)
 
 [node name="Wolf" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 4
 script = ExtResource("1_ilgxj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b4k50")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.462075
+frame_progress = 0.146505
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 4.5)
+position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_lyj8x")

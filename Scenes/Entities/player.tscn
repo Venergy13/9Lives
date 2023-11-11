@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://ljdmieleumgw"]
+[gd_scene load_steps=24 format=3 uid="uid://ljdmieleumgw"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_cm25a"]
 [ext_resource type="Texture2D" uid="uid://ciy14mt2io2yf" path="res://Assets/Cats/cat03_run_strip4.png" id="2_c7m45"]
 [ext_resource type="Texture2D" uid="uid://c6mvbddtpi8rv" path="res://Assets/Cats/cat03_jump_strip4.png" id="2_j57q8"]
 [ext_resource type="Texture2D" uid="uid://bvs6eelddg7rl" path="res://Assets/Cats/cat03_die_strip8.png" id="4_df5ad"]
+[ext_resource type="AudioStream" uid="uid://dww6oevi0pcjv" path="res://Assets/Sounds/SFX/sfx_step_grass_l.wav" id="5_x4jgd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oy1hu"]
 size = Vector2(20, 14)
@@ -144,6 +145,8 @@ script = ExtResource("1_cm25a")
 starting_position = Vector2(40, 140)
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 5
 
 [node name="Hurtbox" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -3)
@@ -158,7 +161,11 @@ position = Vector2(1, -7)
 sprite_frames = SubResource("SpriteFrames_dp0oi")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.279017
+frame_progress = 0.815446
+
+[node name="grass" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_x4jgd")
+volume_db = -6.028
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

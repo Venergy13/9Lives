@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cofqshytjpguj"]
+[gd_scene load_steps=9 format=3 uid="uid://cofqshytjpguj"]
 
 [ext_resource type="PackedScene" uid="uid://cdajd0to1ltwx" path="res://Scenes/Level/level.tscn" id="1_61d53"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_ojbe4"]
 [ext_resource type="PackedScene" uid="uid://ljdmieleumgw" path="res://Scenes/Entities/player.tscn" id="2_2j5ls"]
 [ext_resource type="PackedScene" uid="uid://3cmnp6lw5xqq" path="res://Scenes/UI/ui.tscn" id="3_hesw5"]
+[ext_resource type="PackedScene" uid="uid://bio577mmj5jfw" path="res://Scenes/Level/rain.tscn" id="4_wsd6h"]
+[ext_resource type="AudioStream" uid="uid://ct1w2v5j2yy80" path="res://Assets/Sounds/SFX/relaxing-145038.mp3" id="5_y6oej"]
+
+[sub_resource type="Gradient" id="Gradient_8odk2"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_e74qk"]
+gradient = SubResource("Gradient_8odk2")
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_ojbe4")
@@ -16,4 +23,20 @@ position = Vector2(40, 140)
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(160, 90)
 
+[node name="Rain" parent="." instance=ExtResource("4_wsd6h")]
+
 [node name="UI" parent="." instance=ExtResource("3_hesw5")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_y6oej")
+volume_db = -5.0
+autoplay = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(159.871, 132.499)
+rotation = 1.56726
+scale = Vector2(0.48978, 380.734)
+texture = SubResource("GradientTexture1D_e74qk")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.4, 0.4, 0.4, 1)
