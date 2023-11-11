@@ -9,6 +9,6 @@ func _ready():
 
 
 func restart():
-	player.sprite.play("run")
+	player.respawn()
 	level.restart()
 	

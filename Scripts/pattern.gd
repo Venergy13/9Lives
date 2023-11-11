@@ -19,4 +19,4 @@ func _process(delta):
 
 func end():
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "speed", 0, 3)
+	tween.tween_property(self, "speed", 0, 2)
