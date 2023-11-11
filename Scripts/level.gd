@@ -28,3 +28,13 @@ func spawnPattern(n):
 	
 func end():
 	level_ended = true
+	
+func restart():
+	level_ended = false
+	for element in self.get_children():
+		if (element is Pattern):
+			element.queue_free()
+	for n in amnt:
+		spawnPattern(n*x_offset)
+	$Parallax.scroll_speed_mid = 0.2
+	$Parallax.scroll_speed_front = 0.5

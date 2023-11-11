@@ -28,3 +28,4 @@ func on_player_death():
 
 func _on_continue_button_pressed():
 	game_over.visible = false
+	get_parent().restart()
