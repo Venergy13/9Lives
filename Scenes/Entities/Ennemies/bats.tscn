@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://d21myxuw2y2y1"]
+
+[ext_resource type="Texture2D" uid="uid://bf6kni63627lg" path="res://Assets/Enemies/Blue_Flying.png" id="1_a6xy0"]
+[ext_resource type="Script" path="res://Scripts/bats.gd" id="1_f8hn6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qmc1"]
+atlas = ExtResource("1_a6xy0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0ol5"]
+atlas = ExtResource("1_a6xy0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adag6"]
+atlas = ExtResource("1_a6xy0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfl7i"]
+atlas = ExtResource("1_a6xy0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6pkq"]
+atlas = ExtResource("1_a6xy0")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nr7s"]
+atlas = ExtResource("1_a6xy0")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bwbh2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qmc1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0ol5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adag6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfl7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6pkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nr7s")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5xqx"]
+size = Vector2(87, 31)
+
+[node name="Bats" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 4
+script = ExtResource("1_f8hn6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bwbh2")
+animation = &"fly"
+autoplay = "fly"
+frame_progress = 0.477011
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(22, 9)
+sprite_frames = SubResource("SpriteFrames_bwbh2")
+animation = &"fly"
+autoplay = "fly"
+frame_progress = 0.281822
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(47, 0)
+sprite_frames = SubResource("SpriteFrames_bwbh2")
+animation = &"fly"
+autoplay = "fly"
+frame_progress = 0.224251
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28.5, 3.5)
+shape = SubResource("RectangleShape2D_e5xqx")

@@ -13,5 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	if position.x < -320:
+		queue_free()
+	
 	velocity.x = -SPEED
 	move_and_slide()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlovjq2uee6v4"]
+[gd_scene load_steps=7 format=3 uid="uid://dlovjq2uee6v4"]
 
 [ext_resource type="Script" path="res://Scripts/pattern.gd" id="1_7180t"]
 [ext_resource type="Texture2D" uid="uid://b1340wwjyetjj" path="res://Assets/TileMap/oak_woods_tileset.png" id="1_owj2k"]
 [ext_resource type="PackedScene" uid="uid://bjmecuycmw1w5" path="res://Scenes/Pickups/yarn.tscn" id="3_jvhvc"]
+[ext_resource type="PackedScene" uid="uid://d21myxuw2y2y1" path="res://Scenes/Entities/Ennemies/bats.tscn" id="4_5krsn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4b6g6"]
 texture = ExtResource("1_owj2k")
@@ -1253,3 +1254,6 @@ position = Vector2(152, 86)
 
 [node name="Yarn4" parent="." instance=ExtResource("3_jvhvc")]
 position = Vector2(170, 98)
+
+[node name="Bats" parent="." instance=ExtResource("4_5krsn")]
+position = Vector2(336, 110)

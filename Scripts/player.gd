@@ -26,7 +26,7 @@ func _physics_process(delta):
 		grass_sound.stop()
 		velocity.y += gravity * delta
 	else:
-		if !grass_sound.playing:
+		if !grass_sound.playing and alive:
 			grass_sound.play()
 	
 	if (position.y > 320 and alive):

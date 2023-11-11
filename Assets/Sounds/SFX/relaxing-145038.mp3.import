@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/relaxing-145038.mp3-cece9286682bdcfb86b48a196
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

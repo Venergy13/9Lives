@@ -161,7 +161,7 @@ position = Vector2(1, -7)
 sprite_frames = SubResource("SpriteFrames_dp0oi")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.815446
+frame_progress = 0.933116
 
 [node name="grass" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_x4jgd")
