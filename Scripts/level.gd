@@ -4,6 +4,7 @@ extends Node2D
 var amnt = 3
 var rng = RandomNumberGenerator.new()
 var x_offset = 320
+var instance
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +15,9 @@ func _ready():
 func spawnPattern(n):
 	rng.randomize()
 	var num = rng.randi_range(0,patterns.size()-1)
-	var instance = patterns[num].instantiate()
+	if n == 0:
+		instance = patterns[0].instantiate()
+	else:
+		instance = patterns[num].instantiate()
 	instance.position.x = n
 	add_child(instance)
