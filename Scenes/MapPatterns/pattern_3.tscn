@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcyxrm7a7abbq"]
+[gd_scene load_steps=6 format=3 uid="uid://dcyxrm7a7abbq"]
 
 [ext_resource type="Script" path="res://Scripts/pattern.gd" id="1_533ko"]
 [ext_resource type="Texture2D" uid="uid://b1340wwjyetjj" path="res://Assets/TileMap/oak_woods_tileset.png" id="1_qqql1"]
+[ext_resource type="PackedScene" uid="uid://bjmecuycmw1w5" path="res://Scenes/Pickups/yarn.tscn" id="3_ucpsb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4b6g6"]
 texture = ExtResource("1_qqql1")
@@ -1233,3 +1234,15 @@ script = ExtResource("1_533ko")
 tile_set = SubResource("TileSet_axe1v")
 format = 2
 layer_0/tile_data = PackedInt32Array(655360, 65536, 0, 655361, 65536, 0, 655362, 65536, 0, 655363, 65536, 0, 655367, 65536, 0, 655368, 65536, 0, 655369, 65536, 0, 655370, 65536, 0, 655371, 65536, 0, 655375, 65536, 0, 655376, 65536, 0, 655377, 65536, 0, 655378, 65536, 0, 655379, 65536, 0, 720896, 65536, 1, 720897, 65536, 1, 720898, 65536, 1, 720899, 65536, 1, 720903, 65536, 1, 720904, 65536, 1, 720905, 65536, 1, 720906, 65536, 1, 720907, 65536, 1, 720911, 65536, 1, 720912, 65536, 1, 720913, 65536, 1, 720914, 65536, 1, 720915, 65536, 1)
+
+[node name="Yarn" parent="." instance=ExtResource("3_ucpsb")]
+position = Vector2(79, 130)
+
+[node name="Yarn2" parent="." instance=ExtResource("3_ucpsb")]
+position = Vector2(99, 130)
+
+[node name="Yarn3" parent="." instance=ExtResource("3_ucpsb")]
+position = Vector2(206, 130)
+
+[node name="Yarn4" parent="." instance=ExtResource("3_ucpsb")]
+position = Vector2(226, 130)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjmecuycmw1w5"]
+
+[ext_resource type="Script" path="res://Scripts/yarn.gd" id="1_udoa5"]
+[ext_resource type="Texture2D" uid="uid://io7qln6i13h4" path="res://Assets/yarn.png" id="1_ygtv7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tsxqg"]
+radius = 9.0
+
+[node name="Yarn" type="Node2D"]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_udoa5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ygtv7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_tsxqg")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dcyxrm7a7abbq" path="res://Scenes/MapPatterns/pattern_3.tscn" id="4_1a5ky"]
 [ext_resource type="PackedScene" uid="uid://d145m7mramgao" path="res://Scenes/MapPatterns/pattern_4.tscn" id="5_lljjh"]
 [ext_resource type="PackedScene" uid="uid://dlovjq2uee6v4" path="res://Scenes/MapPatterns/pattern_5.tscn" id="6_yg8gm"]
-[ext_resource type="PackedScene" uid="uid://bhnuj4iex0aij" path="res://Scenes/parallax.tscn" id="7_tqcwb"]
+[ext_resource type="PackedScene" uid="uid://bhnuj4iex0aij" path="res://Scenes/Level/parallax.tscn" id="7_tqcwb"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_wj4mk")
