@@ -8,6 +8,7 @@ const SPEED = 400.0
 const JUMP_VELOCITY = -300.0
 
 var yarn = 0
+var lives = 9
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -37,6 +38,7 @@ func _on_animated_sprite_2d_animation_finished():
 		$AnimatedSprite2D.play("run")
 		
 func die():
+	lives -=1
 	emit_signal("player_died")
 	$AnimatedSprite2D.play("die")
 	

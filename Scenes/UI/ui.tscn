@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://3cmnp6lw5xqq"]
+
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="1_yrq8v"]
+[ext_resource type="Texture2D" uid="uid://cfcwfdaue8mrv" path="res://Assets/HeartUIFull.png" id="2_7k03m"]
+[ext_resource type="Texture2D" uid="uid://io7qln6i13h4" path="res://Assets/yarn.png" id="3_ube3b"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 321.0
+offset_bottom = 181.0
+script = ExtResource("1_yrq8v")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 50.0
+theme_override_constants/separation = -5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_7k03m")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="HUD/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "9"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HUD/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("3_ube3b")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="HUD/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "0"
+
+[node name="GameOverScreen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 181.0
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+layout_mode = 0
+offset_right = 321.0
+offset_bottom = 182.0
+color = Color(0.431373, 0.431373, 0.431373, 0.568627)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_right = 46.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme_override_constants/separation = -3
+
+[node name="Label" type="Label" parent="GameOverScreen/VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="GameOverScreen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "You have x lives left"
+horizontal_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.917
+anchor_right = 0.5
+anchor_bottom = 0.923
+offset_left = -30.0
+offset_top = -19.977
+offset_right = 28.0
+offset_bottom = 0.936996
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "Continue"
+
+[connection signal="pressed" from="GameOverScreen/ContinueButton" to="." method="_on_continue_button_pressed"]
