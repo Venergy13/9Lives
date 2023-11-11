@@ -5,9 +5,13 @@ var amnt = 3
 var rng = RandomNumberGenerator.new()
 var x_offset = 320
 var instance
+var player
+var level_ended = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	player = get_node("../Player")
+	player.player_died.connect(end)
 	for n in amnt:
 		spawnPattern(n*x_offset)
 
@@ -21,3 +25,6 @@ func spawnPattern(n):
 		instance = patterns[num].instantiate()
 	instance.position.x = n
 	add_child(instance)
+	
+func end():
+	level_ended = true

@@ -12,7 +12,8 @@ func _ready():
 func _process(delta):
 	position.x -= speed*delta
 	if position.x < -320:
-		level.spawnPattern(position.x+(level.amnt*level.x_offset))
+		if (!level.level_ended):
+			level.spawnPattern(position.x+(level.amnt*level.x_offset))
 		queue_free()
 
 func end():
