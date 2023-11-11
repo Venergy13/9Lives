@@ -1235,25 +1235,25 @@ layer_0/tile_data = PackedInt32Array(655360, 65536, 0, 655361, 65536, 0, 655362,
 [node name="Pickups" type="Node2D" parent="."]
 
 [node name="Yarn" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(136, 104)
+position = Vector2(136, 110)
 
 [node name="Yarn2" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(155, 104)
+position = Vector2(155, 110)
 
 [node name="Yarn3" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(173, 104)
+position = Vector2(173, 110)
 
 [node name="Yarn4" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(192, 104)
+position = Vector2(192, 110)
 
 [node name="Yarn5" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(136, 85)
+position = Vector2(136, 91)
 
 [node name="Yarn6" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(155, 85)
+position = Vector2(155, 91)
 
 [node name="Yarn7" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(173, 85)
+position = Vector2(173, 91)
 
 [node name="Yarn8" parent="Pickups" instance=ExtResource("3_rcs3s")]
-position = Vector2(192, 85)
+position = Vector2(192, 91)

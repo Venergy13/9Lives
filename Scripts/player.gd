@@ -2,10 +2,12 @@ extends CharacterBody2D
 class_name Player
 
 signal player_died
-
+signal yarn_collected(yarn_amount)
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -300.0
+
+var yarn = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -37,3 +39,7 @@ func _on_animated_sprite_2d_animation_finished():
 func die():
 	emit_signal("player_died")
 	$AnimatedSprite2D.play("die")
+	
+func gain_yarn():
+	yarn += 1
+	emit_signal("yarn_collected", yarn)

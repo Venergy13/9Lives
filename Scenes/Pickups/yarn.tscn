@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://io7qln6i13h4" path="res://Assets/yarn.png" id="1_ygtv7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tsxqg"]
-radius = 9.0
+radius = 8.75
 
 [node name="Yarn" type="Node2D"]
 scale = Vector2(0.8, 0.8)
