@@ -1,0 +1,15 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdajd0to1ltwx"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_wj4mk"]
+[ext_resource type="PackedScene" uid="uid://ckqb0kdddlkyn" path="res://Scenes/MapPatterns/pattern_1.tscn" id="2_2ur6t"]
+[ext_resource type="PackedScene" uid="uid://cepyg1t4y4fcd" path="res://Scenes/MapPatterns/pattern_2.tscn" id="3_ak00a"]
+[ext_resource type="PackedScene" uid="uid://dcyxrm7a7abbq" path="res://Scenes/MapPatterns/pattern_3.tscn" id="4_1a5ky"]
+[ext_resource type="PackedScene" uid="uid://d145m7mramgao" path="res://Scenes/MapPatterns/pattern_4.tscn" id="5_lljjh"]
+[ext_resource type="PackedScene" uid="uid://dlovjq2uee6v4" path="res://Scenes/MapPatterns/pattern_5.tscn" id="6_yg8gm"]
+[ext_resource type="PackedScene" uid="uid://bhnuj4iex0aij" path="res://Scenes/parallax.tscn" id="7_tqcwb"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_wj4mk")
+patterns = Array[PackedScene]([ExtResource("2_2ur6t"), ExtResource("3_ak00a"), ExtResource("4_1a5ky"), ExtResource("5_lljjh"), ExtResource("6_yg8gm")])
+
+[node name="Parallax" parent="." instance=ExtResource("7_tqcwb")]
