@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d145m7mramgao"]
+[gd_scene load_steps=7 format=3 uid="uid://d145m7mramgao"]
 
 [ext_resource type="Script" path="res://Scripts/pattern.gd" id="1_loic5"]
 [ext_resource type="Texture2D" uid="uid://b1340wwjyetjj" path="res://Assets/TileMap/oak_woods_tileset.png" id="1_okb5y"]
 [ext_resource type="PackedScene" uid="uid://bjmecuycmw1w5" path="res://Scenes/Pickups/yarn.tscn" id="3_a6woq"]
+[ext_resource type="PackedScene" uid="uid://yvasnuo2sdot" path="res://Scenes/Entities/Ennemies/wolf.tscn" id="4_loiqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4b6g6"]
 texture = ExtResource("1_okb5y")
@@ -1276,3 +1277,6 @@ position = Vector2(364, 21)
 
 [node name="Yarn14" parent="." instance=ExtResource("3_a6woq")]
 position = Vector2(386, 21)
+
+[node name="Wolf" parent="." instance=ExtResource("4_loiqm")]
+position = Vector2(300, 146)

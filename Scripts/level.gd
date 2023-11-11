@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var patterns : Array[PackedScene]
-var amnt = 3
+var amnt = 2
 var rng = RandomNumberGenerator.new()
 var x_offset = 320
 var instance

@@ -56,3 +56,8 @@ func respawn():
 	sprite.play("run")
 	position = starting_position
 	alive = true
+
+
+func _on_area_2d_body_entered(body):
+	if (body.is_in_group("enemy")):
+		die()
