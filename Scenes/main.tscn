@@ -8,7 +8,7 @@
 [node name="Level" parent="." instance=ExtResource("1_61d53")]
 
 [node name="Player" parent="." instance=ExtResource("2_2j5ls")]
-position = Vector2(156, 140)
+position = Vector2(40, 140)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(160, 90)
